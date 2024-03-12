@@ -22,7 +22,7 @@ const vitepressConfig = {
     ],
     // 社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/huyikai/vitepress-helper' }
+      { icon: 'github', link: 'https://github.com/huyikai/echarts-adaptive-plugin' }
     ],
     // 文档页脚-上下页显示文字
     docFooter: {

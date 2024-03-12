@@ -7,7 +7,7 @@ import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vu
     <img
       class="logo"
       src="/static/charts-logo.png"
-      alt="vitepress-helper"
+      alt="echarts-adaptive-plugin"
     />
     <div class="name">echarts-adaptive-plugin</div>
     <div class="text">提供了一个自适应的 ECharts 图表大小调整功能</div>
