@@ -8,20 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [18]
     steps:
       - name: Checkout  ️
         uses: actions/checkout@v3
       - name: Package Build
         run: |
-          npm i
+          pnpm i
           cd packages/echarts-adaptive-plugin
-          npm i
-          npm run build
+          pnpm build
       - name: Install and Build   
         run: |
-          npm i
-          npm run build
+          pnpm i
+          pnpm build
         env:
           NODE_OPTIONS: '--max_old_space_size=4096'
       - name: Deploy to GitHub Pages

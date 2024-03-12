@@ -14,14 +14,11 @@ importers:
       '@huyikai/vitepress-helper':
         specifier: ^0.0.30
         version: 0.0.30
-      '@release-it/bumper':
-        specifier: ^6.0.1
-        version: 6.0.1(release-it@17.1.1)
       echarts:
         specifier: ^5.5.0
         version: 5.5.0
       echarts-adaptive-plugin:
-        specifier: workspace:^0.0.1
+        specifier: workspace:latest
         version: link:packages/echarts-adaptive-plugin
       git-cz:
         specifier: ^4.9.0
@@ -35,6 +32,9 @@ importers:
 
   packages/echarts-adaptive-plugin:
     devDependencies:
+      '@release-it/bumper':
+        specifier: ^6.0.1
+        version: 6.0.1(release-it@17.1.1)
       '@release-it/conventional-changelog':
         specifier: ^8.0.1
         version: 8.0.1(release-it@17.1.1)

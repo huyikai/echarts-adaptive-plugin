@@ -34,7 +34,7 @@
     "@huyikai/local-cms": "latest",
     "@huyikai/vitepress-helper": "^0.0.30",
     "echarts": "^5.5.0",
-    "echarts-adaptive-plugin": "workspace:^0.0.1",
+    "echarts-adaptive-plugin": "workspace:latest",
     "git-cz": "^4.9.0",
     "vitepress": "^1.0.0-rc.31",
     "vue": "^3.3.9"
