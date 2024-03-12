@@ -33,7 +33,6 @@
   "devDependencies": {
     "@huyikai/local-cms": "latest",
     "@huyikai/vitepress-helper": "^0.0.30",
-    "@release-it/bumper": "^6.0.1",
     "echarts": "^5.5.0",
     "echarts-adaptive-plugin": "workspace:^0.0.1",
     "git-cz": "^4.9.0",
