@@ -10,12 +10,17 @@
   "files": [
     "lib"
   ],
-  "keywords": ["echarts", "plugin", "adaptive"],
+  "keywords": [
+    "echarts",
+    "plugin",
+    "adaptive"
+  ],
   "author": "huyikai",
   "types": "lib/types/index.d.ts",
   "type": "module",
   "license": "MIT",
   "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/echarts": "^4.9.22",
