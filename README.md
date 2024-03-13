@@ -1,25 +1,87 @@
 # echarts-adaptive-plugin
 
-`echartsAdaptive` 方法提供了一个自适应的 ECharts 图表大小调整功能。它通过监听一个 HTML 元素（`monitorContent`）的大小变化，来自动调整 ECharts 实例的大小。
+这是一个为 ECharts 图表提供自适应功能的插件。它可以监听一个元素的大小变化，并自动调整 ECharts 图表的大小，以确保图表在不同设备和屏幕尺寸下都能正常显示。
 
-这个方法接受一个配置对象 `EchartsAdaptiveOptions`，其中包含三个关键属性：
+## 特性
 
-- `echartsInstance`: 必须，指定要调整大小的 ECharts 实例。
-- `monitorContent`: 必须，指定要监听大小变化的 HTML 元素。
-- `handle`: 可选，一个函数，当 `monitorContent` 的大小变化时被调用，用于提供自定义的调整参数给 ECharts 实例的 `resize` 方法。
+- **自适应调整**：自动监听容器大小的变化，调整图表尺寸。
+- **灵活配置**：支持自定义调整参数，以满足特定需求。
+- **简单易用**：通过简单的配置即可实现图表的自适应功能。
 
-当 `monitorContent` 的大小发生变化时，如果提供了 `handle` 函数，则会调用该函数并将返回的对象作为参数传递给 `echartsInstance.resize` 方法，从而允许用户自定义图表的调整行为。如果没有提供 `handle` 函数，则直接调用 `echartsInstance.resize` 方法而不传递任何参数。
+## 安装
 
-此方法返回一个函数，可以用来停止监听 `monitorContent` 的大小变化。
+使用 npm 安装：
 
-## 安装模块
-
-```shell
-npm i echarts-adaptive-plugin
+```bash
+npm install echarts-adaptive-plugin
 ```
 
-## 引入模块
+或者使用 yarn：
 
-```js
+```bash
+yarn add echarts-adaptive-plugin
+```
+
+## 使用方法
+
+首先，确保你已经安装了 ECharts。
+
+然后，你可以这样使用 `echarts-adaptive-plugin`：
+
+```typescript
+import * as echarts from 'echarts';
 import { echartsAdaptive } from 'echarts-adaptive-plugin';
+
+// 初始化 ECharts 实例
+const echartsInstance = echarts.init(
+  document.getElementById('your-chart-container')
+);
+
+// 获取需要监听大小变化的元素
+const monitorContent = document.getElementById('your-chart-container');
+
+// 确保 monitorContent 不为空
+if (!monitorContent) {
+  throw new Error(
+    '监视内容的元素未找到，请确保元素ID正确且已经被加载到DOM中。'
+  );
+}
+
+// 配置自适应插件
+const destroyAdaptive = echartsAdaptive({
+  echartsInstance,
+  monitorContent: document.getElementById('your-chart-container'),
+  handle: ({ echartsInstance, monitorContent }) => {
+    // 可以在这里返回自定义的调整参数
+    return {};
+  }
+});
+
+// 当不再需要自适应功能时，可以调用返回的函数销毁监听
+// destroyAdaptive();
 ```
+
+## API
+
+### echartsAdaptive(options)
+
+#### options
+
+- `echartsInstance`: `echarts.ECharts` - ECharts 实例。
+- `monitorContent`: `HTMLElement` - 需要监听大小变化的元素。
+- `handle?`: `(options: { echartsInstance: echarts.ECharts; monitorContent: HTMLElement; }) => object` - 可选的处理函数，用于返回自定义的调整参数。
+
+## 开发
+
+- 安装依赖：`npm install`
+- 构建项目：`npm run build`
+
+## 许可证
+
+MIT License
+
+---
+
+Made with ❤️ by [huyikai](https://github.com/huyikai)
+
+希望这个插件能帮助你更轻松地实现 ECharts 图表的自适应布局！
