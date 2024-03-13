@@ -1,0 +1,25 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18]
+    steps:
+      - name: Checkout  ️
+        uses: actions/checkout@v3
+      - name: Package Build
+        run: |
+          npm i
+          npm run test
+        env:
+          NODE_OPTIONS: '--max_old_space_size=4096'
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: huyikai/echarts-adaptive-plugin
