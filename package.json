@@ -21,7 +21,7 @@
     "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
     "commit": "git-cz",
-    "release": "pnpm -r run release",
+    "release": "npm run release --workspaces",
     "cms": "node node_modules/@huyikai/local-cms/cms.js docs"
   },
   "engines": {
@@ -31,6 +31,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@release-it/bumper": "^6.0.1",
     "@huyikai/local-cms": "latest",
     "@huyikai/vitepress-helper": "^0.0.30",
     "echarts": "^5.5.0",
