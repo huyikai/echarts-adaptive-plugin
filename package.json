@@ -22,6 +22,7 @@
     "build": "vitepress build docs",
     "commit": "git-cz",
     "release": "npm run release --workspaces",
+    "release-pnpm": "pnpm run release -r",
     "cms": "node node_modules/@huyikai/local-cms/cms.js docs"
   },
   "engines": {
