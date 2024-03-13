@@ -16,11 +16,11 @@ jobs:
         run: |
           npm i
           cd packages/echarts-adaptive-plugin
-          npm build
+          npm run build
       - name: Install and Build   
         run: |
-          pnpm i
-          pnpm build
+          npm i
+          npm run build
         env:
           NODE_OPTIONS: '--max_old_space_size=4096'
       - name: Deploy to GitHub Pages
