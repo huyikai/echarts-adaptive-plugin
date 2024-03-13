@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "rollup --config rollup.config.ts --configPlugin typescript",
-    "release": "release-it"
+    "readme": "cp ../../README.md ./",
+    "release": "npm run readme && release-it"
   },
   "files": [
     "lib"
@@ -26,6 +27,7 @@
     "@types/echarts": "^4.9.22",
     "@types/node": "^20.11.26",
     "rollup": "^4.12.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
   },
   "publishConfig": {
