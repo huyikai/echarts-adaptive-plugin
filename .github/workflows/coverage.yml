@@ -10,7 +10,7 @@ jobs:
       matrix:
         node-version: [18]
     steps:
-      - name: Checkout  ️
+      - name: Checkout
         uses: actions/checkout@v3
       - name: Package Build
         run: |
