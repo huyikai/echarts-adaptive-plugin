@@ -34,7 +34,7 @@ import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vu
         size="medium"
         theme="sponsor"
         text="Github"
-        href="https://github.com/huyikai/vitepress-helper"
+        href="https://github.com/huyikai/echarts-adaptive-plugin"
       >
       </VPButton>
     </div>
