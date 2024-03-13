@@ -7,6 +7,18 @@ lastUpdated: false
 
 # Quick Start
 
-```shell
+::: code-group
+
+```bash [npm]
+npm install echarts-adaptive-plugin
+```
+
+```bash [yarn]
+yarn add echarts-adaptive-plugin
+```
+
+```bash [pnpm]
 pnpm add echarts-adaptive-plugin
 ```
+
+:::
