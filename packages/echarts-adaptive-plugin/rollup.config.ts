@@ -11,7 +11,7 @@ export default {
     },
     {
       name: 'treeConver',
-      file: 'lib/tree-conver.min.js',
+      file: 'lib/echarts-adaptive-plugin.min.js',
       format: 'iife'
     }
   ],

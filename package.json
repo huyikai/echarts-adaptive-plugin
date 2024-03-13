@@ -23,7 +23,8 @@
     "build": "npm run build --workspaces",
     "build-docs": "npm run build && vitepress build docs",
     "release": "npm run build && npm run release --workspaces",
-    "cms": "node node_modules/@huyikai/local-cms/cms.js docs"
+    "cms": "node node_modules/@huyikai/local-cms/cms.js docs",
+    "test": "vitest run --coverage"
   },
   "engines": {
     "node": ">=18"
@@ -32,13 +33,16 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@release-it/bumper": "^6.0.1",
     "@huyikai/local-cms": "latest",
     "@huyikai/vitepress-helper": "^0.0.30",
+    "@release-it/bumper": "^6.0.1",
+    "@vitest/coverage-v8": "^1.3.1",
     "echarts": "^5.5.0",
     "echarts-adaptive-plugin": "workspace:latest",
     "git-cz": "^4.9.0",
+    "jsdom": "^24.0.0",
     "vitepress": "^1.0.0-rc.31",
+    "vitest": "^1.3.1",
     "vue": "^3.3.9"
   }
 }
