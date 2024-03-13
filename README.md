@@ -1,6 +1,6 @@
 # echarts-adaptive-plugin
 
-![npm-version](https://flat.badgen.net/npm/v/echarts-adaptive-plugin) ![node-version](https://flat.badgen.net/npm/node/echarts-adaptive-plugin) ![npm-downloads](https://flat.badgen.net/npm/dw/echarts-adaptive-plugin) ![license](https://flat.badgen.net/npm/license/echarts-adaptive-plugin)
+![npm-version](https://flat.badgen.net/npm/v/echarts-adaptive-plugin) ![node-version](https://flat.badgen.net/npm/node/echarts-adaptive-plugin) ![npm-downloads](https://flat.badgen.net/npm/dw/echarts-adaptive-plugin) ![test-coverage](https://flat.badgen.net/codecov/c/github/huyikai/echarts-adaptive-plugin) ![license](https://flat.badgen.net/npm/license/echarts-adaptive-plugin)
 
 这是一个为 ECharts 图表提供自适应功能的插件。它可以监听一个元素的大小变化，并自动调整 ECharts 图表的大小，以确保图表在不同设备和屏幕尺寸下都能正常显示。
 
