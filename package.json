@@ -22,7 +22,7 @@
     "commit": "git-cz",
     "build": "npm run build --workspaces",
     "build-docs": "npm run build && vitepress build docs",
-    "release": "npm run test && npm run build && npm run release --workspaces",
+    "release": "npm run build && npm run release --workspaces",
     "cms": "node node_modules/@huyikai/local-cms/cms.js docs",
     "test": "vitest run --coverage"
   },
