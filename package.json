@@ -21,7 +21,7 @@
     "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
     "commit": "git-cz",
-    "release": "npm run release --workspaces",
+    "release": "npm run build --workspaces && npm run release --workspaces",
     "cms": "node node_modules/@huyikai/local-cms/cms.js docs"
   },
   "engines": {
