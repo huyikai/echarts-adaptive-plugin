@@ -7,6 +7,7 @@ const vitepressHelperConfig = {
   collapsible: true
 };
 const vitepressConfig = {
+  base:'/echarts-adaptive-plugin/',
   title: 'echarts-adaptive-plugin',
   description: 'echarts-adaptive-plugin.',
   head: [
