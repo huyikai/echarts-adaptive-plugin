@@ -74,7 +74,9 @@ const destroyAdaptive = echartsAdaptive({
 ## 开发
 
 - 安装依赖：`npm install`
+- 文档服务：`npm run dev`
 - 构建项目：`npm run build`
+- 发布项目：`npm run release`
 
 ## 许可证
 

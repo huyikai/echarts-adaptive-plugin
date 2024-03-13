@@ -18,10 +18,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev docs --host",
-    "build": "vitepress build docs",
+    "dev": "npm run build && vitepress dev docs --host",
     "commit": "git-cz",
-    "release": "npm run build --workspaces && npm run release --workspaces",
+    "build": "npm run build --workspaces",
+    "build-docs": "npm run build && vitepress build docs",
+    "release": "npm run build && npm run release --workspaces",
     "cms": "node node_modules/@huyikai/local-cms/cms.js docs"
   },
   "engines": {
